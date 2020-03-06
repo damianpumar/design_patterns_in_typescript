@@ -20,17 +20,5 @@ namespace StrategyPattern {
             console.log("`execute` method of ConcreteStrategy3 is being called");
         }
     }
-
-    export class Context {
-        private strategy: Strategy;
-
-        constructor(strategy: Strategy) {
-            this.strategy = strategy;
-        }
-
-        public executeStrategy(): void {
-            this.strategy.execute();
-        }
-    }
 }
 

@@ -3,9 +3,11 @@ namespace DecoratorPattern {
 	export namespace Demo {
 
 		export function show() : void {
-			var decorator1: DecoratorPattern.Decorator = new DecoratorPattern.ConcreteDecorator(1, new DecoratorPattern.ConcreteComponent("Comp1"));
+			const componentDecorated: DecoratorPattern.Component = new DecoratorPattern.ConcreteComponent();
 
-			decorator1.operation();
+			const componentDecorator: DecoratorPattern.Component = new DecoratorPattern.ConcreteDecorator(componentDecorated);
+
+			componentDecorator.operation();
 		}
 	}
 }

@@ -5,44 +5,33 @@ namespace DecoratorPattern {
     }
 
     export class ConcreteComponent implements Component {
-        private s: String;
-
-        constructor(s: String) {
-            this.s = s;
-        }
-
         public operation(): void {
-            console.log("`operation` of ConcreteComponent", this.s, " is being called!");
+            console.log("Run som code from ConcreteComponent (Decorated component)");
         }
     }
 
     export class Decorator implements Component {
         private component: Component;
-        private id: Number;
 
-        constructor(id: Number, component: Component) {
-            this.id = id;
+        constructor(component: Component) {
             this.component = component;
         }
 
-        public get Id(): Number {
-            return this.id;
-        }
-
         public operation(): void {
-            console.log("`operation` of Decorator", this.id, " is being called!");
+            console.log("Run some code from Decorator component");
+
             this.component.operation();
         }
     }
 
     export class ConcreteDecorator extends Decorator {
-        constructor(id: Number, component: Component) {
-            super(id, component);
+        constructor(component: Component) {
+            super(component)
         }
 
         public operation(): void {
             super.operation();
-            console.log("`operation` of ConcreteDecorator", this.Id, " is being called!");
+            console.log("Run som code from ConcreteDecorator");
         }
     }
 }

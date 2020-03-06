@@ -3,17 +3,15 @@ namespace StrategyPattern {
 	export namespace Demo {
 
 		export function show() : void {
-		    var context: StrategyPattern.Context = new StrategyPattern.Context(new StrategyPattern.ConcreteStrategy1());
+			const strategies: StrategyPattern.Strategy[] = [];
 
-			context.executeStrategy();
+			strategies.push(new StrategyPattern.ConcreteStrategy1());
+			strategies.push(new StrategyPattern.ConcreteStrategy2());
+			strategies.push(new StrategyPattern.ConcreteStrategy3());
 
-			context = new StrategyPattern.Context(new StrategyPattern.ConcreteStrategy2());
-			context.executeStrategy();
-
-			context = new StrategyPattern.Context(new StrategyPattern.ConcreteStrategy3());
-			context.executeStrategy();
-
-
+			strategies.forEach(strategy => {
+				strategy.execute();
+			});
 		}
 	}
 }

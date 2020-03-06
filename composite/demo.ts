@@ -13,8 +13,6 @@ namespace CompositePattern {
 			composite1.add(leaf2);
 			composite1.add(leaf3);
 
-			composite1.remove(2);
-
 			composite2.add(leaf1);
 			composite2.add(leaf3);
 

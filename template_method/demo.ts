@@ -8,7 +8,6 @@ namespace TemplateMethodPattern {
 
 			c1.templateMethod();
 			c2.templateMethod();
-
 		}
 	}
 }

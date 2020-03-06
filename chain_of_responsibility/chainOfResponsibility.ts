@@ -2,54 +2,40 @@ namespace ChainOfResponsibilityPattern {
 
     export class Handler {
         private handler: Handler;
-        private req: number;
-
-        constructor(req: number) {
-            this.req = req;
-        }
 
         public setHandler(handler: Handler): void {
             this.handler = handler;
         }
 
-        public operation(msg: string, req: number): void {
-            if (req <= this.req) {
-                this.handlerRequest(msg)
-            } else if (this.handler !== null && this.handler !== undefined) {
-                this.handler.operation(msg, req);
+        public operation(): void {
+            if(this.handler) {
+                this.handler.operation();
             }
+
+            this.handlerRequest();
         }
 
-        public handlerRequest(msg: string): void {
+        protected handlerRequest(): void {
             throw new Error("Abstract method!");
         }
     }
 
     export class ConcreteHandler1 extends Handler {
-        constructor(req: number) {
-            super(req);
-        }
-        public handlerRequest(msg: string) {
-            console.log("Message (ConcreteHandler1) :: ", msg);
+        protected handlerRequest() {
+            console.log("Message :: (ConcreteHandler1)");
         }
     }
 
 
     export class ConcreteHandler2 extends Handler {
-        constructor(req: number) {
-            super(req);
-        }
-        public handlerRequest(msg: string) {
-            console.log("Message :: (ConcreteHandler2) ", msg);
+        protected handlerRequest() {
+            console.log("Message :: (ConcreteHandler2)");
         }
     }
 
     export class ConcreteHandler3 extends Handler {
-        constructor(req: number) {
-            super(req);
-        }
-        public handlerRequest(msg: string) {
-            console.log("Message :: (ConcreteHandler3) ", msg);
+        protected handlerRequest() {
+            console.log("Message :: (ConcreteHandler3)");
         }
     }
 }

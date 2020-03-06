@@ -1,15 +1,15 @@
 namespace TemplateMethodPattern {
     export class AbstractClass {
-        public method1(): void {
-            throw new Error("Abstract Method");
+        protected method1(): void {
+            console.log("method1 of AbstractClass");
         }
 
-        public method2(): void {
-            throw new Error("Abstract Method");
+        protected method2(): void {
+            console.log("method2 of AbstractClass");
         }
 
-        public method3(): void {
-            throw new Error("Abstract Method");
+        protected method3(): void {
+            console.log("method3 of AbstractClass");
         }
 
         public templateMethod(): void {
@@ -21,29 +21,30 @@ namespace TemplateMethodPattern {
     }
 
     export class ConcreteClass1 extends AbstractClass {
-        public method1(): void {
+        protected method1(): void {
             console.log("method1 of ConcreteClass1");
         }
 
-        public method2(): void {
+        protected method2(): void {
             console.log("method2 of ConcreteClass1");
         }
 
-        public method3(): void {
+        protected method3(): void {
             console.log("method3 of ConcreteClass1");
         }
     }
 
     export class ConcreteClass2 extends AbstractClass {
-        public method1(): void {
+        protected method1(): void {
+            super.method1();
             console.log("method1 of ConcreteClass2");
         }
 
-        public method2(): void {
+        protected method2(): void {
             console.log("method2 of ConcreteClass2");
         }
 
-        public method3(): void {
+        protected method3(): void {
             console.log("method3 of ConcreteClass2");
         }
     }

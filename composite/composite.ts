@@ -6,39 +6,32 @@ namespace CompositePattern {
     export class Composite implements Component {
 
         private list: Component[];
-        private s: String;
+        private name: String;
 
-        constructor(s: String) {
+        constructor(name: String) {
             this.list = [];
-            this.s = s;
+            this.name = name;
         }
 
         public operation(): void {
-            console.log("`operation of `", this.s)
-            for (var i = 0; i < this.list.length; i += 1) {
-                this.list[i].operation();
-            }
+            console.log("`operation of `", this.name)
+            this.list.forEach(component => {
+                component.operation();
+            });
         }
 
-        public add(c: Component): void {
-            this.list.push(c);
-        }
-
-        public remove(i: number): void {
-            if (this.list.length <= i) {
-                throw new Error("index out of bound!");
-            }
-            this.list.splice(i, 1);
+        public add(component: Component): void {
+            this.list.push(component);
         }
     }
 
     export class Leaf implements Component {
-        private s: String;
-        constructor(s: String) {
-            this.s = s;
+        private name: String;
+        constructor(name: String) {
+            this.name = name;
         }
         public operation(): void {
-            console.log("`operation` of Leaf", this.s, " is called.");
+            console.log("`operation` of Leaf", this.name, " is called.");
         }
     }
 }

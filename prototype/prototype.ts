@@ -33,7 +33,7 @@ namespace PrototypePattern {
         }
 
         toString(): string {
-            return "This is Concrete3";
+            return "This is Concrete3" ;
         }
     }
 

@@ -1,21 +1,26 @@
 namespace FactoryMethodPattern {
 
     export interface AbstractProduct {
-        method(param?: any) : void;
+        method() : void;
     }
 
     export class ConcreteProductA implements AbstractProduct {
-        method = (param?: any) => {
-            return "Method of ConcreteProductA";
+        method(): void {
+            console.log("Method of ConcreteProductA");
         }
     }
 
     export class ConcreteProductB implements AbstractProduct {
-        method = (param?: any) => {
-            return "Method of ConcreteProductB";
+        method(): void {
+            console.log("Method of ConcreteProductB");
         }
     }
 
+    export class NullObject implements AbstractProduct {
+        method(): void {
+            console.log("Method of NullObject");
+        }
+    }
 
     export namespace ProductFactory {
         export function createProduct(type: string) : AbstractProduct {
@@ -25,7 +30,7 @@ namespace FactoryMethodPattern {
                 return new ConcreteProductB();
             }
 
-            return null;
+            return new NullObject();
         }
     }
 }
