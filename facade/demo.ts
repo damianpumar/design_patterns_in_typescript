@@ -1,8 +1,8 @@
 /// <reference path="facade.ts" />
 namespace FacadePattern {
 	export namespace Demo {
-		export function show() : void {
-		    var facade: FacadePattern.Facade = new FacadePattern.Facade();
+		export function show(): void {
+			var facade: Facade = new Facade();
 
 			facade.operation1();
 
@@ -10,4 +10,3 @@ namespace FacadePattern {
 		}
 	}
 }
-

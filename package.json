@@ -8,7 +8,8 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "tsc && node patterns.js"
+    "build": "tsc && npm run start",
+    "start": "node patterns.js"
   },
   "author": "",
   "license": "ISC"

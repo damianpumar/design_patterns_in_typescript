@@ -1,15 +1,15 @@
 /// <reference path="flyweight.ts" />
 namespace FlyweightPattern {
 	export namespace Demo {
-		export function show() : void {
-		    var factory: FlyweightPattern.FlyweightFactory   = new FlyweightPattern.FlyweightFactory(),
+		export function show(): void {
+			const factory: FlyweightFactory = new FlyweightFactory();
 
-			conc1: FlyweightPattern.ConcreteFlyweight    = <FlyweightPattern.ConcreteFlyweight>factory.getFlyweight("conc1"),
-			conc2: FlyweightPattern.ConcreteFlyweight    = <FlyweightPattern.ConcreteFlyweight>factory.getFlyweight("conc2");
+			const conc1: ConcreteFlyweight = <ConcreteFlyweight>factory.getFlyweight("conc1");
+
+			const conc2: ConcreteFlyweight = <ConcreteFlyweight>factory.getFlyweight("conc2");
 
 			conc1.operation("1");
 			conc2.operation("2");
 		}
 	}
 }
-
