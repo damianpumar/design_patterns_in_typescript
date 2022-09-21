@@ -1,26 +1,3 @@
-/// <reference path="singleton/demo.ts" />
-/// <reference path="abstract_factory/demo.ts" />
-/// <reference path="factory_method/demo.ts" />
-/// <reference path="builder/demo.ts" />
-/// <reference path="prototype/demo.ts" />
-/// <reference path="adapter/demo.ts" />
-/// <reference path="bridge/demo.ts" />
-/// <reference path="composite/demo.ts" />
-/// <reference path="decorator/demo.ts" />
-/// <reference path="facade/demo.ts" />
-/// <reference path="flyweight/demo.ts" />
-/// <reference path="proxy/demo.ts" />
-/// <reference path="chain_of_responsibility/demo.ts" />
-/// <reference path="command/demo.ts" />
-/// <reference path="interpreter/demo.ts" />
-/// <reference path="iterator/demo.ts" />
-/// <reference path="mediator/demo.ts" />
-/// <reference path="memento/demo.ts" />
-/// <reference path="observer/demo.ts" />
-/// <reference path="state/demo.ts" />
-/// <reference path="strategy/demo.ts" />
-/// <reference path="template_method/demo.ts" />
-/// <reference path="visitor/demo.ts" />
 declare var require: (moduleId: string) => any;
 declare var process: any;
 
@@ -69,7 +46,7 @@ namespace Patterns {
 		});
 
 		printMenu();
-		rl.question("Which pattern would you like to check?   ", function(answer) {
+		rl.question("Which pattern would you like to check?   ", function (answer) {
 			switch (+answer) {
 				case 1:
 					show(SingletonPattern);
