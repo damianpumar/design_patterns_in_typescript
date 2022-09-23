@@ -3,7 +3,7 @@
 namespace BuilderPattern {
 	export namespace Demo {
 		export function show(): void {
-			var u: User = new UserBuilder("Jancsi")
+			const u: User = new UserBuilder("Jancsi")
 				.setAge(12)
 				.setPhone("0123456789")
 				.setAddress("asdf")

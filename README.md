@@ -4,44 +4,42 @@ Here are the implementations of the following design patterns in TypeScript:
 
 ### Creational
 
-- [Singleton](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/singleton)
-- [Abstract Factory](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/abstract_factory)
-- [Factory Method](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/factory_method)
-- [Builder](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/builder)
-- [Prototype](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/prototype)
+-   [Singleton](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/Singleton.md)
+-   [Abstract Factory](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/AbstractFactory.md)
+-   [Factory Method](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/FactoryMethod.md)
+-   [Builder](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/Builder.md)
+-   [Prototype](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/Prototype.md)
 
 ### Structural Patterns
 
-- [Adapter](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/adapter)
-- [Bridge](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/bridge)
-- [Composite](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/composite)
-- [Decorator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/decorator)
-- [Facade](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/facade)
-- [Flyweight](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/flyweight)
-- [Proxy](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/proxy)
+-   [Adapter](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/adapter.md)
+-   [Bridge](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/bridge.md)
+-   [Composite](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/composite.md)
+-   [Decorator](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/decorator.md)
+-   [Facade](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/facade.md)
+-   [Flyweight](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/flyweight.md)
+-   [Proxy](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/proxy.md)
 
 ### Behavioral Patterns
 
-- [Chain of Responsibility](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/chain_of_responsibility)
-- [Command](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/command)
-- [Interpreter](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/interpreter)
-- [Iterator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/iterator)
-- [Mediator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/mediator)
-- [Memento](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/memento)
-- [Observer](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/observer)
-- [State](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/state)
-- [Strategy](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/strategy)
-- [Template Method](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/template_method)
-- [Visitor](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/visitor)
+-   [Chain of Responsibility](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/chain_of_responsibility.md)
+-   [Command](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/command.md)
+-   [Interpreter](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/interpreter.md)
+-   [Iterator](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/iterator.md)
+-   [Mediator](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/mediator.md)
+-   [Memento](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/memento.md)
+-   [Observer](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/observer.md)
+-   [State](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/state.md)
+-   [Strategy](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/strategy.md)
+-   [Template Method](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/template_method.md)
+-   [Visitor](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/visitor.md)
 
 ## Compile the project
 
-```
-$ git clone https://github.com/damianpumar/design_patterns_in_typescript.git
-$ cd design_patterns_in_typescript
-$ npm i
-$ npm run build
-```
+    $ git clone https://github.com/damianpumar/design_patterns_in_typescript.git
+    $ cd design_patterns_in_typescript
+    $ npm i
+    $ npm run build
 
 There is a `tsconfig.json` file in the root directory which is responsible for the compiler options.
 
@@ -56,7 +54,5 @@ By default the output is a `patterns.js` file.
 After the compilation of the project, a `patterns.js` is generated by default.
 Executing the file is:
 
-```
-npm run build (for build and start project)
-npm run start (only start project)
-```
+    npm run build (for build and start project)
+    npm run start (only start project)
