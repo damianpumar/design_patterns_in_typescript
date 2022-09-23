@@ -35,10 +35,8 @@ namespace ObserverPattern {
 		}
 	}
 
-	export class Observer {
-		public notify(): void {
-			throw new Error("Abstract Method!");
-		}
+	export abstract class Observer {
+		public abstract notify(): void;
 	}
 
 	export class ConcreteObserver extends Observer {
@@ -55,8 +53,9 @@ namespace ObserverPattern {
 
 		public notify(): void {
 			console.log("ConcreteObserver's notify method");
-			console.log(this.name, this.state);
 			this.state = this.subject.SubjectState;
+
+			console.log(this.name, this.state);
 		}
 
 		get Subject(): ConcreteSubject {

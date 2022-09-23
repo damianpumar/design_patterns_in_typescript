@@ -1,5 +1,4 @@
-Adapter
-------
+## Adapter
 
 ### Definition
 
@@ -11,13 +10,13 @@ Frequency of use:
 
 Medium high
 
-* * * * *
+* * *
 
 ### UML class diagram
 
 ![](https://www.dofactory.com/images/diagrams/net/adapter.gif)
 
-* * * * *
+* * *
 
 ### Participants
 
@@ -32,14 +31,14 @@ Medium high
 -   **Client **  **(AdapterApp)**
     -   collaborates with objects conforming to the Target interface.
 
-* * * * *
+* * *
 
 ### Structural code in `C#`
 
 This structural code demonstrates the Adapter pattern which maps the interface of one class onto another so that they can work together. These incompatible classes may come from different libraries or frameworks.
 
     using System;
-    
+
     namespace DoFactory.GangOfFour.Adapter.Structural
     {
         /// <summary>
@@ -56,12 +55,12 @@ This structural code demonstrates the Adapter pattern which maps the interface o
                 // Create adapter and place a request
                 Target target = new Adapter();
                 target.Request();
-    
+
                 // Wait for user
                 Console.ReadKey();
             }
         }
-    
+
         /// <summary>
         /// The 'Target' class
         /// </summary>
@@ -72,14 +71,14 @@ This structural code demonstrates the Adapter pattern which maps the interface o
                 Console.WriteLine("Called Target Request()");
             }
         }
-    
+
         /// <summary>
         /// The 'Adapter' class
         /// </summary>
         class Adapter : Target
         {
             private Adaptee _adaptee = new Adaptee();
-    
+
             public override void Request()
             {
                 // Possibly do some other work
@@ -87,7 +86,7 @@ This structural code demonstrates the Adapter pattern which maps the interface o
                 _adaptee.SpecificRequest();
             }
         }
-    
+
         /// <summary>
         /// The 'Adaptee' class
         /// </summary>

@@ -4,35 +4,35 @@ Here are the implementations of the following design patterns in TypeScript:
 
 ### Creational
 
--   [Singleton](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/Singleton.md)
--   [Abstract Factory](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/AbstractFactory.md)
--   [Factory Method](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/FactoryMethod.md)
--   [Builder](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/Builder.md)
--   [Prototype](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/Prototype.md)
+-   [Singleton](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/singleton)
+-   [Abstract Factory](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/abstract_factory)
+-   [Factory Method](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/factory_method)
+-   [Builder](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/builder)
+-   [Prototype](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/prototype)
 
 ### Structural Patterns
 
--   [Adapter](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/adapter.md)
--   [Bridge](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/bridge.md)
--   [Composite](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/composite.md)
--   [Decorator](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/decorator.md)
--   [Facade](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/facade.md)
--   [Flyweight](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/flyweight.md)
--   [Proxy](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/proxy.md)
+-   [Adapter](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/adapter)
+-   [Bridge](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/bridge)
+-   [Composite](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/composite)
+-   [Decorator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/decorator)
+-   [Facade](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/facade)
+-   [Flyweight](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/flyweight)
+-   [Proxy](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/proxy)
 
 ### Behavioral Patterns
 
--   [Chain of Responsibility](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/chain_of_responsibility.md)
--   [Command](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/command.md)
--   [Interpreter](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/interpreter.md)
--   [Iterator](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/iterator.md)
--   [Mediator](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/mediator.md)
--   [Memento](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/memento.md)
--   [Observer](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/observer.md)
--   [State](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/state.md)
--   [Strategy](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/strategy.md)
--   [Template Method](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/template_method.md)
--   [Visitor](https://github.com/damianpumar/DesignPatternsGOF/tree/master/Creational/visitor.md)
+-   [Chain of Responsibility](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/chain_of_responsibility)
+-   [Command](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/command)
+-   [Interpreter](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/interpreter)
+-   [Iterator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/iterator)
+-   [Mediator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/mediator)
+-   [Memento](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/memento)
+-   [Observer](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/observer)
+-   [State](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/state)
+-   [Strategy](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/strategy)
+-   [Template Method](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/template_method)
+-   [Visitor](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/visitor)
 
 ## Compile the project
 

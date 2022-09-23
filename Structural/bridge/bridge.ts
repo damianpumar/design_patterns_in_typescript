@@ -1,13 +1,11 @@
 namespace BridgePattern {
-	export class Abstraction {
+	export abstract class Abstraction {
 		implementor: Implementor;
 		constructor(imp: Implementor) {
 			this.implementor = imp;
 		}
 
-		public callIt(s: String): void {
-			throw new Error("This method is abstract!");
-		}
+		public abstract callIt(s: String): void;
 	}
 
 	export class RefinedAbstractionA extends Abstraction {
