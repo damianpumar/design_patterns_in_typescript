@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "Here are the implementations of the following design patterns in TypeScript:",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
+    "ts-node": "^10.9.2",
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "build": "tsc && npm run start",
-    "start": "node patterns.js"
+    "start": "ts-node main.ts"
   },
-  "author": "",
+  "author": "Damián Pumar",
   "license": "ISC"
 }
