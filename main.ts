@@ -1,32 +1,38 @@
-import { SingletonDemo } from "./1.creational/1.singleton/demo";
-import { AbstractFactoryDemo } from "./1.creational/abstract_factory/demo";
-import { BuilderDemo } from "./1.creational/builder/demo";
-import { FactoryDemo } from "./1.creational/factory_method/demo";
-import { PrototypeDemo } from "./1.creational/prototype/demo";
-import { AdapterDemo } from "./2.structural/adapter/demo";
-import { BridgeDemo } from "./2.structural/bridge/demo";
-import { CompositeDemo } from "./2.structural/composite/demo";
-import { DecoratorDemo } from "./2.structural/decorator/demo";
-import { FacadeDemo } from "./2.structural/facade/demo";
-import { FlyweightDemo } from "./2.structural/flyweight/demo";
-import { ProxyDemo } from "./2.structural/proxy/demo";
-import { ChainOfResponsibilityDemo } from "./3.behavioral/chain_of_responsibility/demo";
-import { CommandDemo } from "./3.behavioral/command/demo";
-import { InterpreterDemo } from "./3.behavioral/interpreter/demo";
-import { IteratorDemo } from "./3.behavioral/iterator/demo";
-import { MediatorDemo } from "./3.behavioral/mediator/demo";
-import { MementoDemo } from "./3.behavioral/memento/demo";
-import { ObserverDemo } from "./3.behavioral/observer/demo";
-import { StateDemo } from "./3.behavioral/state/demo";
-import { StrategyDemo } from "./3.behavioral/strategy/demo";
-import { TemplateMethodDemo } from "./3.behavioral/template_method/demo";
-import { VisitorDemo } from "./3.behavioral/visitor/demo";
 import { Pattern } from "./Pattern";
 
-declare var require: (moduleId: string) => any;
-declare var process: any;
+import {
+  SingletonDemo,
+  AbstractFactoryDemo,
+  FactoryDemo,
+  BuilderDemo,
+  PrototypeDemo,
+} from "./1.creational";
 
-var readline = require("readline");
+import {
+  AdapterDemo,
+  BridgeDemo,
+  CompositeDemo,
+  DecoratorDemo,
+  FacadeDemo,
+  FlyweightDemo,
+  ProxyDemo,
+} from "./2.structural";
+
+import {
+  ChainOfResponsibilityDemo,
+  CommandDemo,
+  InterpreterDemo,
+  IteratorDemo,
+  MediatorDemo,
+  MementoDemo,
+  ObserverDemo,
+  StateDemo,
+  StrategyDemo,
+  TemplateMethodDemo,
+  VisitorDemo,
+} from "./3.behavioral";
+
+const readline = require("readline");
 
 const menu = (): void => {
   const rl = readline.createInterface({
