@@ -2,57 +2,45 @@
 
 Here are the implementations of the following design patterns in TypeScript:
 
-### Creational
+### Creational 🐣
 
--   [Singleton](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/singleton)
--   [Abstract Factory](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/abstract_factory)
--   [Factory Method](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/factory_method)
--   [Builder](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/builder)
--   [Prototype](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Creational/prototype)
+- [Singleton](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/1.creational/1.singleton)
+- [Abstract Factory](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/1.creational/2.abstract_factory)
+- [Factory Method](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/1.creational/3.factory_method)
+- [Builder](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/1.creational/4.builder)
+- [Prototype](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/1.creational/5.prototype)
 
-### Structural Patterns
+### Structural Patterns 🏗️
 
--   [Adapter](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/adapter)
--   [Bridge](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/bridge)
--   [Composite](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/composite)
--   [Decorator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/decorator)
--   [Facade](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/facade)
--   [Flyweight](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/flyweight)
--   [Proxy](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Structural/proxy)
+- [Adapter](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/2.structural/1.adapter)
+- [Bridge](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/2.structural/2.bridge)
+- [Composite](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/2.structural/3.composite)
+- [Decorator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/2.structural/4.decorator)
+- [Facade](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/2.structural/5.facade)
+- [Flyweight](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/2.structural/6.flyweight)
+- [Proxy](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/2.structural/7.proxy)
 
-### Behavioral Patterns
+### Behavioral Patterns 🏃
 
--   [Chain of Responsibility](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/chain_of_responsibility)
--   [Command](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/command)
--   [Interpreter](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/interpreter)
--   [Iterator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/iterator)
--   [Mediator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/mediator)
--   [Memento](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/memento)
--   [Observer](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/observer)
--   [State](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/state)
--   [Strategy](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/strategy)
--   [Template Method](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/template_method)
--   [Visitor](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/Behavioral/visitor)
+- [Chain of Responsibility](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/1.chain_of_responsibility)
+- [Command](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/2.command)
+- [Interpreter](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/3.interpreter)
+- [Iterator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/4.iterator)
+- [Mediator](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/5.mediator)
+- [Memento](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/6.memento)
+- [Observer](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/7.observer)
+- [State](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/8.state)
+- [Strategy](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/9.strategy)
+- [Template Method](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/10.template_method)
+- [Visitor](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/3.behavioral/11.visitor)
 
-## Compile the project
+## Run the project 🚀
 
     $ git clone https://github.com/damianpumar/design_patterns_in_typescript.git
     $ cd design_patterns_in_typescript
     $ npm i
-    $ npm run build
+    $ npm start
 
-There is a `tsconfig.json` file in the root directory which is responsible for the compiler options.
+## License 📄
 
-As it is set the default target is Ecmascript5 now.
-
-Any additional options come here.
-
-By default the output is a `patterns.js` file.
-
-## Execute the project
-
-After the compilation of the project, a `patterns.js` is generated by default.
-Executing the file is:
-
-    npm run build (for build and start project)
-    npm run start (only start project)
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/damianpumar/design_patterns_in_typescript/tree/master/LICENSE.md)
