@@ -1,3 +1,6 @@
+import readline from "readline";
+import { Table } from "console-table-printer";
+
 import { Pattern } from "./Pattern";
 
 import {
@@ -32,136 +35,146 @@ import {
   VisitorDemo,
 } from "./3.behavioral";
 
-const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-const menu = (): void => {
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
+const patterns: { [key: number]: new () => Pattern } = {
+  1: SingletonDemo,
+  2: AbstractFactoryDemo,
+  3: FactoryDemo,
+  4: BuilderDemo,
+  5: PrototypeDemo,
+  6: AdapterDemo,
+  7: BridgeDemo,
+  8: CompositeDemo,
+  9: DecoratorDemo,
+  10: FacadeDemo,
+  11: FlyweightDemo,
+  12: ProxyDemo,
+  13: ChainOfResponsibilityDemo,
+  14: CommandDemo,
+  15: InterpreterDemo,
+  16: IteratorDemo,
+  17: MediatorDemo,
+  18: MementoDemo,
+  19: ObserverDemo,
+  20: StateDemo,
+  21: StrategyDemo,
+  22: TemplateMethodDemo,
+  23: VisitorDemo,
+};
+
+const printMenu = (): void => {
+  const p = new Table({
+    title: "Choose one pattern to demonstrate",
+    columns: [
+      { name: "Creational", alignment: "left" },
+      { name: "Structural", alignment: "left" },
+      { name: "Behavioral", alignment: "left" },
+    ],
+    rows: [
+      {
+        Creational: "1: Singleton",
+        Structural: "6: Adapter",
+        Behavioral: "13: Chain of responsibility",
+      },
+      {
+        Creational: "2: Abstract factory",
+        Structural: "7: Bridge",
+        Behavioral: "14: Command",
+      },
+      {
+        Creational: "3: Factory method",
+        Structural: "8: Composite",
+        Behavioral: "15: Interpreter",
+      },
+      {
+        Creational: "4: Builder",
+        Structural: "9: Decorator",
+        Behavioral: "16: Iterator",
+      },
+      {
+        Creational: "5: Prototype",
+        Structural: "10: Facade",
+        Behavioral: "17: Mediator",
+      },
+      {
+        Creational: "",
+        Structural: "11: Flyweight",
+        Behavioral: "18: Memento",
+      },
+      {
+        Creational: "",
+        Structural: "12: Proxy",
+        Behavioral: "19: Observer",
+      },
+      {
+        Creational: "",
+        Structural: "",
+        Behavioral: "20: State",
+      },
+      {
+        Creational: "",
+        Structural: "",
+        Behavioral: "21: Strategy",
+      },
+      {
+        Creational: "",
+        Structural: "",
+        Behavioral: "22: Template method",
+      },
+      {
+        Creational: "",
+        Structural: "",
+        Behavioral: "23: Visitor",
+      },
+    ],
   });
 
-  printMenu();
+  p.printTable();
+};
 
+const whichPatternWouldYouLike = () => {
+  rl.question("Which pattern would you like to check?   ", (answer: string) => {
+    const pattern = patterns[+answer];
+
+    if (!pattern) {
+      console.log("This pattern number does not exist");
+
+      return rl.close();
+    }
+
+    const instance = new pattern();
+
+    instance.show();
+
+    doYouWantContinue();
+  });
+};
+
+const doYouWantContinue = () => {
   rl.question(
-    "Which pattern would you like to check?   ",
-    function (answer: string) {
-      switch (+answer) {
-        case 1:
-          show(SingletonDemo);
-          break;
-        case 2:
-          show(AbstractFactoryDemo);
-          break;
-        case 3:
-          show(FactoryDemo);
-          break;
-        case 4:
-          show(BuilderDemo);
-          break;
-        case 5:
-          show(PrototypeDemo);
-          break;
-        case 6:
-          show(AdapterDemo);
-          break;
-        case 7:
-          show(BridgeDemo);
-          break;
-        case 8:
-          show(CompositeDemo);
-          break;
-        case 9:
-          show(DecoratorDemo);
-          break;
-        case 10:
-          show(FacadeDemo);
-          break;
-        case 11:
-          show(FlyweightDemo);
-          break;
-        case 12:
-          show(ProxyDemo);
-          break;
-        case 13:
-          show(ChainOfResponsibilityDemo);
-          break;
-        case 14:
-          show(CommandDemo);
-          break;
-        case 15:
-          show(InterpreterDemo);
-          break;
-        case 16:
-          show(IteratorDemo);
-          break;
-        case 17:
-          show(MediatorDemo);
-          break;
-        case 18:
-          show(MementoDemo);
-          break;
-        case 19:
-          show(ObserverDemo);
-          break;
-        case 20:
-          show(StateDemo);
-          break;
-        case 21:
-          show(StrategyDemo);
-          break;
-        case 22:
-          show(TemplateMethodDemo);
-          break;
-        case 23:
-          show(VisitorDemo);
-          break;
-        default:
-          break;
+    "Do you want to check another pattern? (y/n)   ",
+    (answer: string) => {
+      if (answer.toLowerCase() === "y") {
+        return start();
       }
-      rl.close();
+
+      console.log("Bye! 👋");
+
+      return rl.close();
     }
   );
 };
 
-const printMenu = (): void => {
-  const menu =
-    "= Creational Patterns == \n" +
-    "  1: Singleton \n" +
-    "  2: Abstract factory \n" +
-    "  3: Factory method \n" +
-    "  4: Builder \n" +
-    "  5: Prototype \n\n" +
-    "= Structural Patterns == \n" +
-    "  6: Adapter \n" +
-    "  7: Bridge \n" +
-    "  8: Composite \n" +
-    "  9: Decorator \n" +
-    " 10: Facade \n" +
-    " 11: Flyweight \n" +
-    " 12: Proxy \n\n" +
-    "= Behavioral Patterns == \n" +
-    " 13: Chain of responsibility \n" +
-    " 14: Command \n" +
-    " 15: Interpreter \n" +
-    " 16: Iterator \n" +
-    " 17: Mediator \n" +
-    " 18: Memento \n" +
-    " 19: Observer \n" +
-    " 20: State \n" +
-    " 21: Strategy \n" +
-    " 22: Template method \n" +
-    " 23: Visitor \n";
+const start = (): void => {
+  console.clear();
 
-  console.log("\n\n");
-  console.log("==== Choose one pattern to demonstrate ====");
-  console.log("\n");
-  console.log(menu);
+  printMenu();
+
+  whichPatternWouldYouLike();
 };
 
-const show = (patternCtor: new () => Pattern): void => {
-  const pattern = new patternCtor();
-
-  pattern.show();
-};
-
-menu();
+start();
