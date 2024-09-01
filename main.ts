@@ -1,16 +1,12 @@
-import readline from "readline";
 import { Table } from "console-table-printer";
-
-import { Pattern } from "./Pattern";
-
+import readline from "readline";
 import {
-  SingletonDemo,
   AbstractFactoryDemo,
-  FactoryDemo,
   BuilderDemo,
+  FactoryDemo,
   PrototypeDemo,
+  SingletonDemo,
 } from "./1.creational";
-
 import {
   AdapterDemo,
   BridgeDemo,
@@ -20,7 +16,6 @@ import {
   FlyweightDemo,
   ProxyDemo,
 } from "./2.structural";
-
 import {
   ChainOfResponsibilityDemo,
   CommandDemo,
@@ -34,6 +29,8 @@ import {
   TemplateMethodDemo,
   VisitorDemo,
 } from "./3.behavioral";
+import { Pattern } from "./Pattern";
+import { spawn } from "child_process";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -162,14 +159,26 @@ const doYouWantContinue = () => {
         return start();
       }
 
-      console.log("Please give a star to this repository if you like it. 🌟");
-      console.log(
-        "https://github.com/damianpumar/design_patterns_in_typescript",
+      rl.question(
+        "Would you like to start this repo? (y/n)   ",
+        (answer: string) => {
+          if (answer.toLowerCase() === "y") {
+            console.log("Thanks!👍");
+
+            setTimeout(() => {
+              spawn("open", [
+                "https://github.com/damianpumar/design_patterns_in_typescript",
+              ]);
+            }, 1000);
+          } else {
+            console.log("ok 👍");
+          }
+
+          console.log("Bye! 👋");
+
+          return rl.close();
+        },
       );
-
-      console.log("Bye! 👋");
-
-      return rl.close();
     },
   );
 };
