@@ -162,10 +162,15 @@ const doYouWantContinue = () => {
         return start();
       }
 
+      console.log("Please give a star to this repository if you like it. 🌟");
+      console.log(
+        "https://github.com/damianpumar/design_patterns_in_typescript",
+      );
+
       console.log("Bye! 👋");
 
       return rl.close();
-    }
+    },
   );
 };
 
